@@ -1,0 +1,8 @@
+# dataset
+activitynet/
+charades/
+tvr/
+
+# cache
+__pycache__/
+

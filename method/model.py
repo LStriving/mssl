@@ -251,6 +251,7 @@ class MS_SL_Net(nn.Module):
                                 video_proposal_feat=None,
                                 video_feat=None,
                                 video_feat_mask=None,
+                                cross=False,
                                 return_query_feats=False):
 
 

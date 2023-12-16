@@ -28,7 +28,7 @@ class BaseOptions(object):
         self.parser.add_argument("--results_root", type=str, default="results")
         self.parser.add_argument("--exp_id", type=str, default=None, help="id of this run, required at training")
         self.parser.add_argument("--seed", type=int, default=2018, help="random seed")
-        self.parser.add_argument("--device", type=int, default=0, help="0 cuda, -1 cpu")
+        self.parser.add_argument("--device", type=int, default=0, help="0 cuda, -1 cpu", choices=[0,-1])
         self.parser.add_argument("--device_ids", type=int, nargs="+", default=[1], help="GPU ids to run the job")
         self.parser.add_argument("--num_workers", type=int, default=8,
                                  help="num subprocesses used to load the data, 0: use main process")
@@ -86,7 +86,7 @@ class BaseOptions(object):
         self.parser.add_argument("--initializer_range", type=float, default=0.02, help="initializer range for layers")
         # post processing
 
-        self.parser.add_argument("--model_name", type=str, default='MS-SL_Net')
+        self.parser.add_argument("--model_name", type=str, default='MS_SL_Net')
         self.parser.add_argument('--root_path', type=str)
         self.parser.add_argument('--visual_feature', type=str)
         self.parser.add_argument('--collection', type=str)
